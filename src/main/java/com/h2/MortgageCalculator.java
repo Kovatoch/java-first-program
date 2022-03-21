@@ -41,12 +41,12 @@ public class MortgageCalculator {
         return "monthlyPayment: " + df.format(monthlyPayment);
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         long loanAmount = Long.parseLong(args[0]);
         int termInYears = Integer.parseInt(args[1]);
         float annualRate =  Float.parseFloat(args[2]);
 
-        MortgageCalculator calculator = new MortgageCalculator(264000, 30,3.74f );
+        MortgageCalculator calculator = new MortgageCalculator(loanAmount, termInYears,annualRate );
         calculator.calculateMonthlyPayment();
         System.out.print(calculator.toString());
     }
